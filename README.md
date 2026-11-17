@@ -24,6 +24,22 @@
 | 15 | C++ 언어의 개요 | `src/lec15_cpp_overview.c` | 클래스/캡슐화/상속/다형성을 C로 구현 |
 | 15 | (비교용 원본) | `src/lec15_cpp_overview.cpp` | 위 내용의 C++ 버전 |
 
+## 실습 과제 (assignments/)
+
+기존 `C--` 저장소의 실습 과제를 커밋 기록과 함께 옮겨 온 폴더이다. 키보드 입력을 받는 대화형 프로그램이라 `make run` 대상에는 포함하지 않는다.
+
+| 파일 | 과제 | 핵심 내용 |
+|---|---|---|
+| `assignments/ex1.c` | 계산기 | 사칙연산, 0으로 나누기 예외처리, 입력 검증 |
+| `assignments/calc(simple_version)` | 계산기(간단 버전) | ex1을 단순하게 다시 만든 C 소스 |
+| `assignments/ex2.c` | 온도 변환기 | 섭씨·화씨·켈빈 변환, 절대영도 검증 |
+| `assignments/ex3.c` | 성적 등급 판정 | 다중 if-else, +/- 세부 등급 |
+
+```bash
+gcc -std=c11 -Wall -Wextra -o ex1 assignments/ex1.c -lm && ./ex1
+gcc -std=c11 -Wall -Wextra -x c -o calc "assignments/calc(simple_version)" -lm && ./calc
+```
+
 ## 빌드와 실행
 
 gcc(C11 이상)와 make가 필요하다. 수학 함수(`sqrt`, `pow` 등)를 쓰는 실습이 있어 `-lm`으로 링크한다.
